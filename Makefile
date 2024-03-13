@@ -6,8 +6,8 @@ CC := gcc
 
 all: $(TARGET)
 
-$(TARGET): main.c
-	$(CC) -o $@ $^
+$(TARGET): main.c utilities.c utilities.h pages.c pages.h
+	$(CC) -o $@ main.c utilities.c pages.c
 
 clean:
 	rm -rf $(TARGET)
